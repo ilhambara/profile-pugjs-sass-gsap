@@ -1,0 +1,235 @@
+@charset "UTF-8";
+body, html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #D4DAD9;
+  color: #252525;
+  overflow: hidden;
+}
+
+.slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  width: 50%;
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0 30px 40px -15px rgba(0, 0, 0, 0.35);
+          box-shadow: 0 30px 40px -15px rgba(0, 0, 0, 0.35);
+  background-color: #fff;
+}
+
+.card__img {
+  background-position: center;
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+
+#img01 {
+  background-image: url("/img/twitter-road.jpg");
+}
+
+#img02 {
+  background-image: url("/img/github-mountain.jpg");
+}
+
+#img03 {
+  background-image: url("/img/discord-rain.jpg");
+}
+
+#img04 {
+  background-image: url("/img/instagram-forest.jpg");
+}
+
+.card__content {
+  padding: 5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 50%;
+}
+
+.card__content-theme {
+  font-weight: 900;
+  font-size: 2vmin;
+}
+
+.card__content-header {
+  font-weight: 900;
+  font-size: 6vmin;
+  text-transform: capitalize;
+  letter-spacing: 0.01em;
+  line-height: 0.95;
+  margin: 3vmin 0 3.5vmin;
+}
+
+.card__content-paragraph {
+  font-size: 1rem;
+  line-height: 1.7;
+  font-weight: 300;
+  margin-bottom: 2.5vmin;
+}
+
+.card__content-link {
+  color: #BA3428;
+  font-size: 1rem;
+  display: block;
+  cursor: pointer;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  text-decoration: none;
+}
+
+.card__content-link:hover {
+  opacity: 1;
+}
+
+.card__content-link:after {
+  content: ' →';
+}
+
+.prevnext {
+  position: absolute;
+  width: 4vmin;
+  height: 8vmin;
+  right: 2%;
+  bottom: 0;
+  top: 0;
+  margin: auto 0;
+}
+
+.prevnext-button {
+  width: 100%;
+  height: 50%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+#prev, #next {
+  position: relative;
+  cursor: pointer;
+}
+
+#prev:hover:after, #prev:hover:after, #next:hover:after, #next:hover:after {
+  opacity: 1;
+}
+
+#prev:after, #next:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 0.6;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+#prev:after {
+  content: '↑';
+  font-size: 2rem;
+}
+
+#next:after {
+  content: '↓';
+  font-size: 2rem;
+}
+
+/* media query */
+@media only screen and (max-width: 600px) {
+  .slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    height: 100vh;
+  }
+  .card {
+    position: relative;
+    width: 80%;
+    height: 75vh;
+    margin: auto;
+    display: inline-block;
+    -webkit-box-shadow: 0 30px 40px -15px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 30px 40px -15px rgba(0, 0, 0, 0.35);
+    background-color: #fff;
+    text-align: center;
+    border-radius: 8px;
+  }
+  .card__img {
+    position: relative;
+    background-position: center;
+    width: 100%;
+    height: 240px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 10;
+    border-radius: 8px 8px 0 0;
+  }
+  .card__content {
+    padding: 6%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+  }
+  .card__content-theme {
+    font-weight: 900;
+    font-size: 1rem;
+  }
+  .card__content-header {
+    font-weight: 900;
+    font-size: 2rem;
+    line-height: 1;
+  }
+  .card__content-paragraph {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  .card__content-link {
+    font-size: 1.4rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */
