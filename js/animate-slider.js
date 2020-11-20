@@ -27,10 +27,10 @@ function goToNextSlide(slideOut, slideIn, slideInAll) {
             .set(slideIn, { autoAlpha: 1, className: '+=active' })
             .set(slideOut, { className: '-=active' })
             .to(slideOutContent, 0.65, { y: '+=40px', ease: Power3.easeInOut }, 0)
-            .to(slideOutImg, 0.65, { backgroundPosition: 'bottom', ease: Power3.easeInOut }, 0)
+            // .to(slideOutImg, 0.65, { backgroundPosition: 'bottom', ease: Power3.easeInOut }, 0)
             .to(slideInAll, 1, { y: '-=100%', ease: Power3.easeInOut }, 0)
             .fromTo(slideInContent, 0.65, { y: '-=40px' }, { y: 0, ease: Power3.easeInOut }, "-=0.7")
-            .fromTo(slideInImg, 0.65, { backgroundPosition: 'top' }, { backgroundPosition: 'bottom', ease: Power3.easeInOut }, "-=0.7")
+        // .fromTo(slideInImg, 0.65, { backgroundPosition: 'top' }, { backgroundPosition: 'bottom', ease: Power3.easeInOut }, "-=0.7")
     }
 
     TweenMax.set($slideNavPrev, { autoAlpha: 1 });
@@ -65,10 +65,10 @@ function goToPreviousSlide(slideOut, slideIn, slideInAll) {
             .set(slideIn, { autoAlpha: 1, className: '+=active' })
             .set(slideOut, { className: '-=active' })
             .to(slideOutContent, 0.65, { y: '-=40px', ease: Power3.easeInOut }, 0)
-            .to(slideOutImg, 0.65, { backgroundPosition: 'top', ease: Power3.easeInOut }, 0)
+            // .to(slideOutImg, 0.65, { backgroundPosition: 'top', ease: Power3.easeInOut }, 0)
             .to(slideInAll, 1, { y: '+=100%', ease: Power3.easeInOut }, 0)
             .fromTo(slideInContent, 0.65, { y: '+=40px' }, { y: 0, ease: Power3.easeInOut }, "-=0.7")
-            .fromTo(slideInImg, 0.65, { backgroundPosition: 'bottom' }, { backgroundPosition: 'top', ease: Power3.easeInOut }, "-=0.7")
+        // .fromTo(slideInImg, 0.65, { backgroundPosition: 'bottom' }, { backgroundPosition: 'top', ease: Power3.easeInOut }, "-=0.7")
     }
 
     TweenMax.set($slideNavNext, { autoAlpha: 1 });
