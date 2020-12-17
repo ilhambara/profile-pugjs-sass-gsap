@@ -15,8 +15,8 @@ function goToNextSlide(slideOut, slideIn, slideInAll) {
     var tl = new TimelineLite(),
         slideOutContent = slideOut.find('.card__content'),
         slideInContent = slideIn.find('.card__content'),
-        slideOutImg = slideOut.find('.card__img'),
-        slideInImg = slideIn.find('.card__img'),
+        // slideOutImg = slideOut.find('.card__img'),
+        // slideInImg = slideIn.find('.card__img'),
         index = slideIn.index(),
         size = $homeSlide.length;
     console.log(index);
